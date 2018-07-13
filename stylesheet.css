@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,500,300italic,500italic,700italic,900,300);
+
+/*css variables*/
+:root {
+	--primary-color: #C4C4C4;
+	--secondary-color: #ffff;
+}
+
+* {
+	/*defines how the width and height of an element are calculated: should they include padding and borders, or not.*/
+	box-sizing: border-box;
+}
+body {
+	font-family: "Roboto", 'Helvetica Neue, Helvetica, Arial';
+}
+
+#login-box {
+	position: absolute;
+	background: var(--primary-color, grey);
+	width: 710px;
+	height: 398px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+#login {
+	position: absolute;
+	background: var(--secondary-color);
+	width: 283px;
+	height: 398px;
+	right: 0;
+	border: 4px solid var(--primary-color,grey);
+}
+
+.sign-in {
+	font-size: 24px;
+	margin-left: 56px;
+	margin-top: 90px;
+	margin-bottom: 19px;
+}
+input {
+	width: 192px;
+	height: 44px;
+	font-size: 18px;
+	padding-left: 11px;
+	margin-left: 45px;
+	margin-bottom: 19px;
+}
+.box-input {
+	border: 3px solid var(--primary-color,grey);
+}
+.button-enter {
+	background: var(--primary-color,grey);
+	border-radius: 5px;
+	border: none;
+}
