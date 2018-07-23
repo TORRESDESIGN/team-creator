@@ -57,3 +57,21 @@ input {
 	border-radius: 5px;
 	border: none;
 }
+.tc-logo {
+	position: absolute;
+	width: 54px;
+	top: 114px;
+	left: 187px;
+}
+#login-box > h1 {
+	position: absolute;
+	font-size: 60px;
+	top: 128px;
+	left: 131px;
+}
+#login-box > h2 {
+	position: absolute;
+	font-size: 38px;
+	top: 200px;
+	left: 131px;
+}
