@@ -9,37 +9,15 @@
 * {
 	/*defines how the width and height of an element are calculated: should they include padding and borders, or not.*/
 	box-sizing: border-box;
+	margin: 0;
 }
+
 body {
 	font-family: "Roboto", 'Helvetica Neue, Helvetica, Arial';
 }
-
-#login-box {
-	position: absolute;
-	background: var(--primary-color, grey);
-	width: 710px;
-	height: 398px;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	margin: auto;
-}
-
-#login {
-	position: absolute;
-	background: var(--secondary-color);
-	width: 283px;
-	height: 398px;
-	right: 0;
-	border: 4px solid var(--primary-color,grey);
-}
-
-.sign-in {
-	font-size: 24px;
-	margin-left: 56px;
-	margin-top: 90px;
-	margin-bottom: 19px;
+header {
+	display: flex;
+	flex-direction: row;
 }
 input {
 	width: 192px;
@@ -49,6 +27,77 @@ input {
 	margin-left: 45px;
 	margin-bottom: 19px;
 }
+
+#login-box {
+	position: absolute;
+	background: var(--primary-color, grey);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 710px;
+	height: 398px;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+}
+
+#login {
+	background: var(--secondary-color);
+	width: 283px;
+	height: 398px;
+	border: 4px solid var(--primary-color,grey); 
+}
+/*#login-box > h1 {
+	position: absolute;
+	font-size: 60px;
+	top: 178px;
+	left: 131px;
+}
+#login-box > h2 {
+	position: absolute;
+	font-size: 38px;
+	top: 241px;
+	left: 131px;
+}
+#login-box > img {
+	position: absolute;
+	top: 114px;
+	left: 187px;
+}*/
+.logo-group-bg {
+	background: var(--primary-color, grey);
+	width: 428px;
+	height: 398px;
+}
+.logo-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 168px;
+	height: 172px;
+	margin-left: 129px;
+	margin-top: 114px;
+}
+.logo-group > img {
+	margin: auto;
+}
+.logo-group > h1 {
+	font-size: 60px;
+	text-align: center;
+}
+.logo-group > h2 {
+	font-size: 38px;
+	text-align: center;
+}
+
+.sign-in {
+	font-size: 24px;
+	margin-left: 56px;
+	margin-top: 90px;
+	margin-bottom: 19px;
+}
+
 .box-input {
 	border: 3px solid var(--primary-color,grey);
 }
@@ -56,22 +105,19 @@ input {
 	background: var(--primary-color,grey);
 	border-radius: 5px;
 	border: none;
+	cursor: pointer;
 }
 .tc-logo {
-	position: absolute;
 	width: 54px;
-	top: 114px;
-	left: 187px;
+	height: 54px;
 }
-#login-box > h1 {
-	position: absolute;
-	font-size: 60px;
-	top: 128px;
-	left: 131px;
+.hero-bar {
+	width: auto;
+	height: 83px;
+	background: var(--primary-color,grey);
 }
-#login-box > h2 {
-	position: absolute;
-	font-size: 38px;
-	top: 200px;
-	left: 131px;
+
+/* Mobile version */
+@media (max-width: 360px) {
+
 }
