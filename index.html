@@ -1,3 +1,35 @@
+<?php
+
+$host = "localhost";
+$user = "root";
+$password = "";
+$db = "tc_login";
+
+mysql_connect($host, $user, $password);
+mysql_select_db($db);
+
+if(isset(['username'])) {
+	$uname = $_POST['USERNAME'];
+	$password = $_POST['PASSWORD'];
+
+	$sql = "select * from loginform where user= '".$uname." AND Pass '".$password."' limit 1"
+
+	$result = mysql_query($sql);
+
+	if(mysql_num_rows($result) ==1) {
+		echo " Hello there, welcome.";
+		exit();
+
+	} else {
+		echo "Wrong Password!";
+		exit();
+
+	}
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,9 +47,9 @@
 	  		</div>
   		</div>
   		<div id="login">
-  			<form>
+  			<form method="POST" action="#">
   				<p class="sign-in">SIGN IN</p>
-  				<input class="box-input" type="text" name="USER NAME" placeholder="USER NAME"><br>
+  				<input class="box-input" type="text" name="USERNAME" placeholder="USER NAME"><br>
   				<input class="box-input" type="text" name="PASSWORD" placeholder="PASSWORD"><br>
   				<input class="button-enter" type="submit" value="ENTER">
   			</form>
